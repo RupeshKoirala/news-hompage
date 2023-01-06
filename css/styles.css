@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;700;800&display=swap');
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root{
+    /* Primary */
+    --soft-orange:hsl(35, 77%, 62%);
+    --soft-red:hsl(5, 85%, 63%);
+    /* Neutral */
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue:hsl(233, 8%, 79%); 
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+    /* Fonts */
+    --font-family: 'Inter', sans-serif;
+}
+
+main{
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem;
+}
+/* Headings */
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.heading-elements{
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+}
+li{
+    display: inline;
+}
+a:link{
+    text-decoration: none;
+    color:black;
+}
+ul{
+    flex-direction: row;
+    
+}
+.heading-item{
+    margin: 0 15px;
+    cursor: pointer;
+    display: inline;
+}
+.heading-item:hover{
+    color: var(--soft-red);
+}
+.heading-icon{
+    display: none;
+}
+.mobile-img{
+    display: none;
+}
+
+/* Center items */
+.big-card{
+    display: flex;
+    padding: 2rem 0;
+}
+/* Left Items */
+.big-card-left img{
+    width: 100%;
+}
+.big-card-left{
+    margin-right: 15px;
+}
+.heading-detail{
+    display: flex;
+    padding: 5px 0;
+}
+.heading-detail h1{
+    font-weight: 800;
+    font-size: 35px;
+}
+.p-button{
+    margin: 1rem 2rem 0 3rem;  
+}
+.p-button p{
+    color: var(--dark-grayish-blue); 
+}
+.p-button button{
+    padding: 12px 50px;
+    background-color: var(--soft-red);
+    color: var(--off-white);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+.p-button button:hover{
+    background-color: var(--very-dark-blue);
+}
+/* Right items */
+
+.big-card-right{
+    padding: 0 2rem;
+    background-color: var(--very-dark-blue);
+    color: var(--off-white);
+    cursor: pointer;
+}
+.big-card-right h2{
+    font-size: 32px;
+    color: var(--soft-orange);
+}
+.big-card-right h3:hover{
+    color:var(--soft-orange);
+}
+.big-card-right p{
+    color: var(--grayish-blue);
+}
+.big-card-right hr{
+    color: var(--grayish-blue);
+}
+
+/* Bottom part */
+.bottom-cards{
+    display: flex;
+    margin-top: 3rem;
+}
+.bottom-pic-detail{
+    display: flex;
+    width: 100%;
+}
+.bottom-pic-detail img{
+    width: 50%;
+    height: 80%;
+}
+.num-head-detail{
+    margin: 0 20px;
+}
+.num-head-detail h1{
+    color: var(--grayish-blue);
+}
+.num-head-detail h3{
+    color: var(--very-dark-blue);
+    font-size: 16px;
+}
+.num-head-detail h3:hover{
+    color: var(--soft-red);
+    cursor: pointer;
+}
+
+@media (max-width:1200px){
+    main{
+        min-width: 400px;
+    }
+    .heading{
+        display: flex;
+        justify-content: space-between;
+    }
+    .heading-elements{
+        display: none;
+    }
+    .heading-icon{
+        display: inline;
+    }
+    img[alt="gaint-lego"]{
+        display:none;
+    }
+    img[alt="mobile-logo"]{
+        display: block;
+        min-width: 100%;
+    }
+    .big-card{
+        display: flex;
+        flex-direction: column;
+    }
+    .big-card-left{
+        display: flex;
+        flex-direction: column;
+    }
+    .big-card-right{
+        display: flex;
+        flex-direction: column;
+    }
+    .heading-detail{
+        display: flex;
+        flex-direction: column;
+    }
+    .heading-detail .p-button{
+        margin: 0;
+        margin-bottom: 25px;
+    }
+    .bottom-cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .bottom-pic-detail{
+        margin: 10px 0;
+    }
+    
+    /* Hamburger menu */
+    .heading-elements{
+        display: block;
+    }
+    .hamburger-heading{
+        position: fixed;
+        padding: 100px;
+        transform: translateY(205%);
+        background-color: rgb(241, 237, 231);
+        right: 24.7%;
+        top:30.7%
+    }
+    .heading-item{
+        padding: 150px;
+        line-height: 1.5rem;
+    }
+    .cross-icon{
+        display: none;
+    }
+    .showMenu{
+        transform: translateY(0);
+    }
+}
